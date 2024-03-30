@@ -1,0 +1,86 @@
+* {
+  font-family: sans-serif;
+}
+
+body {
+  background-color: blueviolet;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 10% auto;
+  width: 300px;
+  min-height: 400px;
+  padding: 20px;
+  color: black;
+  background-color: white;
+  border-radius: 40px;
+  box-shadow: 1px 4px 10px 4px rgb(2, 2, 94);
+}
+.circle {
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  border: 1px solid black;
+  background-color: white;
+}
+.add_menu {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.add_menu input {
+  border-radius: 8px;
+  padding: 10px;
+  border: 1px solid;
+}
+.add_menu button {
+    padding: 10px;
+    font-size: 2rem;
+    line-height: 0;
+    height: 40px;
+    background-color: rebeccapurple;
+    color: white;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 1px 1px 4px black;
+}
+.display_tasks {
+  margin-top: 4%;
+}
+.item {
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(128, 128, 128, 0.274);
+  padding: 10px;
+  position: relative;
+}
+.item:hover {
+    background-color: rgba(0, 128, 0, 0.274);
+    cursor: pointer;
+}
+.item.completed {
+    background-color: rgba(0, 128, 0, 0.274);
+    text-decoration: line-through;
+}
+.item.completed .circle {
+    background-color: greenyellow;
+}
+.item button {
+    background-color: red;
+    position: absolute;
+    right: 0;
+    border: none;
+    height: 100%;
+    width: 0;
+    padding: 0;
+    overflow: hidden;
+    transition: all .2s ease;
+}
+.item:hover button {
+    width: 40px;
+    cursor: pointer;
+}
